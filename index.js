@@ -21,8 +21,6 @@ const outLines = [
 ];
 
 records.toArray().then(arr => {
-    console.log(arr.length);
-
     var i = 0;
     for (const epc of arr) {
         i++;
@@ -30,9 +28,6 @@ records.toArray().then(arr => {
 
         outLines.push(`${epc['OSG_REFERENCE_NUMBER']},${epc['LODGEMENT_DATE']},${epc['CURRENT_ENERGY_RATING']}`);
     }
-
-    console.log(outLines.length);
-    
 
     writeFileSync(outFile, outLines.join("\n"));
 });
