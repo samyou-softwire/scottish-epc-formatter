@@ -3,14 +3,14 @@ const { program } = require('commander');
 const { readFileSync, writeFileSync } = require('fs');
 
 program.option('--infile <string>', 'infile', 'input.csv');
-program.option('--outfile <string>', 'outfile', 'output.csv');
+program.option('--outfile <string>', 'outfile', undefined);
 
 program.parse();
 
 const options = program.opts();
 
 const inFile = options.infile;
-const outFile = options.outfile;
+const outFile = options.outfile ?? options.infile;
 
 const content = readFileSync(inFile);
 
