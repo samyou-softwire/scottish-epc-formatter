@@ -20,6 +20,8 @@ const outLines = [
     'uprn,date,epc_rating'
 ];
 
+console.log(`start ${inFile} to ${outFile}`);
+
 records.toArray().then(arr => {
     var i = 0;
     for (const epc of arr) {
@@ -32,3 +34,4 @@ records.toArray().then(arr => {
     writeFileSync(outFile, outLines.join("\n"));
 });
 
+console.log(`finish ${inFile} to ${outFile}`);
