@@ -32,6 +32,6 @@ records.toArray().then(arr => {
     }
 
     writeFileSync(outFile, outLines.join("\n"));
-});
 
-console.log(`finish ${inFile} to ${outFile}`);
+    console.log(`finish ${inFile} to ${outFile}`);
+});
