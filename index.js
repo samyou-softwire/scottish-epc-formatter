@@ -35,3 +35,5 @@ records.toArray().then(arr => {
 
     console.log(`finish ${inFile} to ${outFile}`);
 });
+
+console.log("finished!");
