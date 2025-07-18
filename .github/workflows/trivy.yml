@@ -36,4 +36,7 @@ jobs:
         continue-on-error: true
         with:
           image-ref: 'test:${{ github.sha }}'
-          trivy-config: trivy.yaml
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
